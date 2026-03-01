@@ -8,11 +8,15 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 public class CSEControllerTest {
-	@Autowired
-	CSEController c;
-	@Test
-	void test() {
-		int result = c.addCSE(2,3);
-		assertEquals(5, result);
-	}
+
+    @Autowired
+    CSEController c;
+
+    @Test
+    void testAddCSE() {
+
+        String result = c.addCSE(2, 3);
+
+        assertEquals("Roll No: 23MH1A05P9 | Result: 5", result);
+    }
 }
